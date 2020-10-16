@@ -20,25 +20,19 @@
 
 ## items テーブル
 
-| Column       | Type       | Options                        |
-| ------------ | ---------- | ------------------------------ |
-| name         | string     | null: false                    |
-| text         | text       | null: false                    |
-| price        | integer    | null: false                    |
-| category_id  | integer    | null: false                    |
-| status_id    | integer    | null: false                    |
-| charge_id    | integer    | null: false                    |
-| area_id      | integer    | null: false                    |
-| date_id      | integer    | null: false                    |
-| user         | references | null: false, foreign_key: true |
+| Column         | Type       | Options                        |
+| -------------- | ---------- | ------------------------------ |
+| name           | string     | null: false                    |
+| text           | text       | null: false                    |
+| price          | integer    | null: false                    |
+| category_id    | integer    | null: false                    |
+| status_id      | integer    | null: false                    |
+| charge_id      | integer    | null: false                    |
+| prefectures_id | integer    | null: false                    |
+| date_id        | integer    | null: false                    |
+| user           | references | null: false, foreign_key: true |
 
 
-
-### Association
-
-- belongs_to :user
-- has_one :purchase 
-- belongs_to_active_hash :genre
 
 ## purchases テーブル
 
@@ -68,7 +62,3 @@
 | purchase       | references | null: false, foreign_key: true |
 
 
-### Association
-
-- belongs_to :purchase
-- belongs_to_active_hash :genre
