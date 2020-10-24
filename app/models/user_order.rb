@@ -8,6 +8,7 @@ class UserOrder
   validates :municipality
   validates :address
   validates :phone_number, format: { with: /\A\d{11}\z/ }
+  validates :token
  end
 
  def save
